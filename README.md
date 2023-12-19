@@ -1,2 +1,10 @@
 # myRpc
-a rpc framework
+MyRPC是一款基于 Nacos 实现的 RPC 框架。网络传输实现了基于 Java 原生 Socket 与 Netty 版本，并且实现了多种序列化与负载均衡算法。
+
+**特性**
+实现了基于 Java 原生 Socket 传输与 Netty 传输两种网络传输方式
+实现了四种序列化算法，Json 方式、Kryo 算法、 Google Protobuf 方式（默认采用 Kryo方式序列化）
+实现了两种负载均衡算法：随机算法与轮转算法
+接口抽象良好，模块耦合度低，网络传输、序列化器、负载均衡算法可配置
+实现自定义的通信协议
+可以通过**注解的方式**将服务注册到Nacos服务器中
